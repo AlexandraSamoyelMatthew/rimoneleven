@@ -3,20 +3,36 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background: linear-gradient(120deg, #0a0a1a, #1b0033); color: #fff; min-height: 100vh; font-family: Arial, sans-serif; }
 
-header { margin-top:20px; position:fixed; top:0; left:0; width:100%; display:flex; justify-content:space-between; align-items:center; padding:1rem 9%; z-index:100; }
+header { margin-top:20px; position:absolute; top:0; left:0; width:100%; display:flex; justify-content:space-between; align-items:center; padding:1rem 9%; z-index:100; }
 .logo { font-size:20px; text-decoration: none; font-weight:800; color:#d4af37; transition:0.3s; font-family: 'Cinzel', serif; }
 .logo:hover { transform:scale(1.1); }
 
-nav { text-decoration: none; margin-top: -2px; margin-bottom: -2px; margin-left: -2px; margin-right: -2px; padding: 0; box-sizing: border-box; display: flex; align-items: center;
+nav {text-decoration: none; margin-top: -2px; margin-bottom: -2px; margin-left: -2px; margin-right: -2px; padding: 0; box-sizing: border-box; display: flex; align-items: center;
     justify-content: center; height: 100%; background-color: transparent; word-wrap: normal; word-spacing: normal; transition: 0.3s ease; 
     border: none; font-family: Arial, Helvetica, sans-serif; outline: none; font-size: 25px; font-weight: 500; border-bottom: 2px solid transparent;
     cursor: pointer; text-decoration: none; text-align: center; background-color: transparent; box-sizing: border-box;word-break: normal;white-space: normal;   
     text-transform: none; letter-spacing: normal; display: flex; font-style: normal; overflow: hidden; outline: none; text-indent: 0; text-shadow: none; border: none;}
 nav a { font-size:25px; color:white; padding: 15px; padding-top: 25px; text-decoration: none; margin:10px; transition:0.3s; border-bottom:2px solid transparent; }
-nav a:hover, nav a.active { color:#d4af37; border-bottom:2px solid #d4af37; }
-
-.hogwarts { display:flex; justify-content:center; align-items:center; padding:12rem 9% 5rem; min-height:100vh; }
-.hogwarts .content { max-width:800px; background:rgba(255,255,255,0.05); padding:3rem; border-radius:1.5rem; box-shadow:0 0 30px rgba(212,175,55,0.5); }
+nav a:hover {
+  color: #d4af37;
+  border-bottom: 2px solid #d4af37;
+  background-color: #4848484b;
+  transition: 0.3s;
+}
+nav a.active { color:#ffffff; border-bottom:2px solid #d4af37;}
+/* Anti Hero Section */
+.hogwarts {
+  position: relative;
+  min-height: 156vh;
+  background: url("dumbldore.jpeg") center/cover no-repeat; /* your image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 1rem;
+}
+/*
+.hogwarts { display:flex; justify-content:center; align-items:center; padding:12rem 9% 5rem; min-height:100vh; }*/
+.hogwarts .content { max-width:800px; background:rgba(212 175 55 / 0%); padding:3rem; border-radius:1.5rem; box-shadow:0 0 30px rgba(212, 175, 55, 0.5); font-family: emoji; }
 .hogwarts h1 { font-size:4rem; color:#d4af37; margin-bottom:2rem; text-align:center; font-family: 'Cinzel', serif; }
 .hogwarts p { font-size:1.6rem; line-height:1.8; text-align:justify; }
 
@@ -47,20 +63,22 @@ nav a:hover, nav a.active { color:#d4af37; border-bottom:2px solid #d4af37; }
   }
     nav a:hover,
   nav a.active {
-    border-bottom: 2px solid #b74b4b;
+    border-bottom: 2px solid #d4af37;
   }
-
+  .content {
+    padding: 2rem;
+    margin-top: 50px;
+  }
   .logo {
     font-size: 18px;
   }
-  .antihero {
+  .hogwarts {
     padding: 6rem 2rem 5rem;
-  
   }
-  .antihero h1 {
+  .hogwarts h1 {
     font-size: 25px;
   }
-  .antihero p {
+  .hogwarts p {
     font-size: 18px;
   }
 }
