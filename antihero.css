@@ -140,8 +140,7 @@ nav a:hover, nav a.active {
 
 .about {
     min-height: 100vh;
-            padding : 20px 10px;
-    /* padding: 6rem 12%; */
+    padding : 20px 10px;
     background: linear-gradient(135deg, #130800, #1c1c1c);
     color: #fff;
     font-size: 20px;
@@ -262,7 +261,7 @@ nav a:hover, nav a.active {
 .anti-hero {
   position: relative;
   min-height: 156vh;
-  background: url("bgabout.png") center/cover no-repeat; /* your image */
+  background: url("avatar2.png") center/cover no-repeat; /* your image */
   display: flex;
   justify-content: center;
   align-items: center;
