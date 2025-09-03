@@ -1,7 +1,7 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 body { background:linear-gradient(120deg,#00111a,#000); color:#fff; min-height:100vh; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
 
-header { margin-top:20px; position:fixed; top:0; left:0; width:100%; display:flex; justify-content:space-between; align-items:center; padding:1rem 9%; z-index:100; }
+header { margin-top:20px; position:absolute; top:0; left:0; width:100%; display:flex; justify-content:space-between; align-items:center; padding:1rem 9%; z-index:100; }
 .logo { font-size:20px; text-decoration: none; font-weight:800; color:#c0c0c0; transition:0.3s; }
 .logo:hover { transform:scale(1.1); }
 
@@ -9,6 +9,7 @@ nav a { font-size:25px; padding: 15px; padding-top: 25px; text-decoration: none;
 nav a:hover, nav a.active { color:#c0c0c0; border-bottom:2px solid #c0c0c0; }
 
 .blackpearl { display:flex; justify-content:center; align-items:center; padding:12rem 9% 5rem; min-height:100vh; position:relative; }
+
 .blackpearl::before { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:radial-gradient(circle at center, rgba(192,192,192,0.1), transparent 70%); animation:glow 8s ease-in-out infinite; }
 @keyframes glow { 0% {opacity:0.3;} 50% {opacity:0.6;} 100% {opacity:0.3;} }
 
@@ -39,6 +40,7 @@ nav { text-decoration: none; margin-top: -2px; margin-bottom: -2px; margin-left:
   }
   header {
     padding: 1rem 2rem;
+    flex-direction: column;
   }
   nav a {
     padding: 8px;
@@ -49,7 +51,7 @@ nav { text-decoration: none; margin-top: -2px; margin-bottom: -2px; margin-left:
   }
     nav a:hover,
   nav a.active {
-    border-bottom: 2px solid #b74b4b;
+    border-bottom: 2px solid #c0c0c0;
   }
 
   .logo {
