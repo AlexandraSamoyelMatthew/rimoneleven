@@ -1,30 +1,59 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 body { background:#000; color:#fff; min-height:100vh; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
 
-header { margin-top:20px; position:fixed; top:0; left:0; width:100%; display:flex; justify-content:space-between; align-items:center; padding:1rem 9%; z-index:100; }
+header { margin-top:20px; position:absolute; top:-15px; left:0; width:100%; display:flex; justify-content:space-between; align-items:center; padding:10px; z-index:100; }
 .logo { font-size:20px; font-weight:800; text-decoration: none; color:#39ff14; transition:0.3s; }
 .logo:hover { transform:scale(1.1); }
 
 nav a { font-size:25px; padding: 15px; padding-top: 25px; text-decoration: none; color:white; margin:10px; transition:0.3s; border-bottom:2px solid transparent; }
 nav a:hover, nav a.active { color:#39ff14; border-bottom:3px solid #39ff14; }
 
-.detective { display:flex; justify-content:center; align-items:center; padding:12rem 9% 5rem; min-height:100vh; background:linear-gradient(to bottom,#000,#111); position:relative; }
 .detective::before { content:""; position:absolute; top:0; left:0; width:100%; height:3px; background:linear-gradient(90deg, #39ff14 25%, transparent 25%, transparent 50%, #39ff14 50%, #39ff14 75%, transparent 75%, transparent); background-size:20px 3px; animation:wave 3s linear infinite; }
 @keyframes wave { from { background-position:0 0; } to { background-position:200px 0; } }
+/* Anti Hero Section */
+.detective {
+  position: relative;
+  min-height: 93vh;
+  background: url("desbg.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.about {
+  padding: 60px 10px;
+  position: relative;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.detective .content { 
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 30px rgba(57, 255, 20, 0.4);
+    position: absolute;
+    z-index: 1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    left: 45px;
+    top: 275px;
+    /* right: 130px; */
+    height: fit-content;
+}
 
-.detective .content { max-width:800px; background:rgba(255,255,255,0.05); padding:3rem; border-radius:1.5rem; box-shadow:0 0 30px rgba(57,255,20,0.4); position:relative; z-index:1; }
-.detective h1 { font-size:4rem; color:#39ff14; margin-bottom:2rem; text-align:center; }
-.detective p { font-size:1.6rem; line-height:1.8; text-align:justify; }
-nav { text-decoration: none; margin-top: -2px; margin-bottom: -2px; margin-left: -2px; margin-right: -2px; padding: 0; box-sizing: border-box; display: flex; align-items: center;
-    justify-content: center; height: 100%; background-color: transparent; word-wrap: normal; word-spacing: normal; transition: 0.3s ease; 
-    border: none; font-family: Arial, Helvetica, sans-serif; outline: none; font-size: 25px; font-weight: 500; border-bottom: 2px solid transparent;
-    cursor: pointer; text-decoration: none; text-align: center; background-color: transparent; box-sizing: border-box;word-break: normal;white-space: normal;   
-    text-transform: none; letter-spacing: normal; display: flex; font-style: normal; overflow: hidden; outline: none; text-indent: 0; text-shadow: none; border: none;} 
+/* Start of media query for max-width: 768px */
 
-      @media (max-width: 768px) {
-  .about {
-    padding: 20px 10px;
-  }
+@media (max-width: 768px) {
+    .about {
+      padding: 45px 10px;
+      top: 100px;
+      left: 10px;
+      right: 10px;
+      position: relative; 
+    }
+
   .about h2 {
     font-size: 25px;
   }
@@ -38,7 +67,10 @@ nav { text-decoration: none; margin-top: -2px; margin-bottom: -2px; margin-left:
   }
   header {
     padding: 1rem 2rem;
-  }
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    gap: 10px;}
   nav a {
     padding: 8px;
     font-size: 16px;
@@ -48,20 +80,57 @@ nav { text-decoration: none; margin-top: -2px; margin-bottom: -2px; margin-left:
   }
     nav a:hover,
   nav a.active {
-    border-bottom: 2px solid #b74b4b;
+    border-bottom: 2px solid #39ff14;
   }
-
   .logo {
     font-size: 18px;
   }
-  .antihero {
-    padding: 6rem 2rem 5rem;
-  
+  .detective h1 {
+  font-size: 1.6rem; color:#39ff14; margin-bottom:2rem; text-align:center; 
   }
-  .antihero h1 {
-    font-size: 25px;
-  }
-  .antihero p {
+  .detective p {
+    position: relative;
+    top: 2rem;
+    right: 130px;
+    left: 47px;
+    display: contents;
     font-size: 18px;
+    text-align: justify;
+    line-height: 1.8;
+    padding-bottom: 20px;
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    z-index: 1;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    text-shadow: -1px 0px 6px #101010;
+    color: #5c5c5c;
+    overflow: hidden;
+    text-indent: 0;
+    word-break: normal;
+    white-space: normal;
+  }
+  .detective .content {
+    padding: 1rem;
+    top: 176px;
+    right: 40px;
+    left: 10px;
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+    transform: none;
+    max-width: 100%;
+  }
+  .detective {
+    position: relative;
+    top: 2px;
+    left: 0;
+    right: 0;
+    min-height: 120vh;
+    padding: 1rem 1rem;
+    background: url("phonebg.jpg") center/cover no-repeat;
+    display: block;
   }
 }
